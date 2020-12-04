@@ -34,13 +34,10 @@ jobs:
       - name: Print Git Version
         run: git --version
 
-      - name: Print Git User
-        run: echo $GITHUB_ACTOR
-
       - name: Setup git user
         run: |
-          git config --global user.name $GITHUB_ACTOR
-          # git config --global user.email "$(git --no-pager log --format=format:'%ae' -n 1)"
+          git config --global user.name 'gituser'
+          git config --global user.email 'gituser@example.com'
 
       - name: Git Info
         run: |
