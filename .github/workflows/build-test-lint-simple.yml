@@ -34,6 +34,9 @@ jobs:
       - name: Print Git Version
         run: git --version
 
+      - name: Print Git User
+        run: echo $GITHUB_ACTOR
+
       - name: Setup git user
         run: |
           git config --global user.name $GITHUB_ACTOR
